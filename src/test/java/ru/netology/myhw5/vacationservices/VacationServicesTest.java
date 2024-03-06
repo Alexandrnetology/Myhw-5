@@ -10,10 +10,12 @@ public class VacationServicesTest {
             "10_000,3000,20_000",
             "100_000,60_000,150_000"
     })
-    public void testVacationWork(int expected, int income, int expenses, int threshould) {
+    public void testVacationWork(int income, int expenses, int threshould) {
+        VacationServices services = new VacationServices();
 
         int actual = services.calculate(income, expenses, threshould);
-
+        int expected = 3;
         Assertions.assertEquals(expected, actual);
+
     }
 }
